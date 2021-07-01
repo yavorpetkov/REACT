@@ -47,6 +47,7 @@ class App extends Component {
 // without jsx and only js
 // class App extends Component {
 // 	render() {
+// creating elements with REACT
 // 		return React.createElement('div', { className: 'App' }, React.createElement('h1', null, 'Hello From React'));
 // 	}
 // }
