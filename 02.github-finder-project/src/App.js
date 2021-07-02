@@ -8,9 +8,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<Navbar />
-				{/* with set title and icon properties not from the default */}
 				{/* <Navbar title="Github Finder" icon="fab fa-github" /> */}
+				<Navbar />
 				<div className="container">
 					<Users />
 				</div>

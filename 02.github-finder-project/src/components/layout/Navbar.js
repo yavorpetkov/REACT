@@ -1,28 +1,27 @@
 // rce to create this layout
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export class Navbar extends Component {
-	// to make a default for the props
-	static defaultProps = {
-		title: 'Github Finder',
-		icon: 'fab fa-github'
-	};
-	static propTypes = {
-		title: PropTypes.string.isRequired,
-		icon: PropTypes.string.isRequired
-	};
+const Navbar = ({ icon, title }) => {
+	return (
+		<nav className="navbar bg-primary">
+			<h1>
+				{/* props are properties that can be passed into a component from outside */}
+				<i className={icon} /> {title}
+			</h1>
+		</nav>
+	);
+};
 
-	render() {
-		return (
-			<nav className="navbar bg-primary">
-				<h1>
-					{/* props are properties that can be passed into a component from outside */}
-					<i className={this.props.icon} /> {this.props.title}
-				</h1>
-			</nav>
-		);
-	}
-}
-
+// to make a default for the props
+// use static instead of the Navbar. when in a class
+Navbar.defaultProps = {
+	title: 'Github Finder',
+	icon: 'fab fa-github'
+};
+// it will work if it is not a strung but it will give an error
+Navbar.propTypes = {
+	title: PropTypes.string.isRequired,
+	icon: PropTypes.string.isRequired
+};
 export default Navbar;
