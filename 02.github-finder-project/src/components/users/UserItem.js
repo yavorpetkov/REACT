@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 
 export class UserItem extends Component {
-	constructor() {
-		super();
-		this.state = {
-			id: 'id',
-			login: 'mojombo',
-			avatar_url: 'https://avatars.githubusercontent.com/u/1?v=4',
-			html_url: 'https://github.com/mojombo'
-		};
-	}
+	// no need for this with props
+	// constructor() {
+	// 	super();
+	// 	this.state = {
+	// 		id: 'id',
+	// 		login: 'mojombo',
+	// 		avatar_url: 'https://avatars.githubusercontent.com/u/1?v=4',
+	// 		html_url: 'https://github.com/mojombo'
+	// 	};
+	// }
 	render() {
 		// deconstruct so we dont use this.state so much
-		const { login, avatar_url, html_url } = this.state;
+		const { login, avatar_url, html_url } = this.props.user;
 		return (
 			<div className="card text-center">
 				<img src={avatar_url} alt="" className="round-img" style={{ width: '60px' }} />
