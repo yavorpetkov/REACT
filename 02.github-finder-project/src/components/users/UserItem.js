@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import './UserItem.css';
 
 // in fuctions we dont need this.props we just pass props in the function
+
 // here we destructured the props in the function
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
 	// const { login, avatar_url, html_url } = props.user;

@@ -1,6 +1,7 @@
 import React from 'react';
 import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
+
 // impt to bring PropTypes
 import PropTypes from 'prop-types';
 import './Users.css';
