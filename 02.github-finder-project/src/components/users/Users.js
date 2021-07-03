@@ -3,13 +3,14 @@ import UserItem from './UserItem';
 import Spinner from '../layout/Spinner';
 // impt to bring PropTypes
 import PropTypes from 'prop-types';
+import './Users.css';
 
 const Users = (props) => {
 	if (props.loading) {
 		return <Spinner />;
 	} else {
 		return (
-			<div style={userStyle}>
+			<div className="userStyle">
 				{props.users.map((user) => (
 					<UserItem key={user.id} user={user} />
 					// maps all the users from the array from App
@@ -23,12 +24,6 @@ Users.propTypes = {
 	// no need to use props. here
 	users: PropTypes.array.isRequired,
 	loading: PropTypes.bool.isRequired
-};
-
-const userStyle = {
-	display: 'grid',
-	gridTemplateColumns: 'repeat(3, 1fr)',
-	gridGap: '1rem'
 };
 
 export default Users;
