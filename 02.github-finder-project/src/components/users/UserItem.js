@@ -1,4 +1,5 @@
 import React from 'react';
+// impt to bring PropTypes
 import PropTypes from 'prop-types';
 
 // in fuctions we dont need this.props we just pass props in the function

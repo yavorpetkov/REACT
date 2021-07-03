@@ -1,5 +1,6 @@
 // rce to create this layout
 import React from 'react';
+// impt to bring PropTypes
 import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
