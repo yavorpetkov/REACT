@@ -10,13 +10,18 @@ export class Search extends Component {
 		// searchUsers must be a function
 		searchUsers: PropTypes.func.isRequired,
 		clearUsers: PropTypes.func.isRequired,
-		showClear: PropTypes.bool.isRequired
+		showClear: PropTypes.bool.isRequired,
+		setAlert: PropTypes.func.isRequired
 	};
 
 	onSubmit = (e) => {
 		e.preventDefault();
-		this.props.searchUsers(this.state.text);
-		this.setState({ text: '' });
+		if (this.state.text === '') {
+			this.props.setAlert('Please enter something', 'light');
+		} else {
+			this.props.searchUsers(this.state.text);
+			this.setState({ text: '' });
+		}
 	};
 	onChange = (e) => {
 		// use brackets and e.target.name to shorten it if there is more than 1 input
