@@ -13,17 +13,15 @@ class App extends Component {
 		loading: false
 	};
 
-	// life cycle method
-	async componentDidMount() {
-		// state can't be changed directly by this.state.loading = true
-		// with class based components we have to use setState
+	// Search GitHub Users
+	searchUsers = async (text) => {
 		this.setState({ loading: true });
 		const res = await axios.get(
-			`https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process
-				.env.REACT_APP_GITHUB_CLIENT_SECRET}`
+			`https://api.github.com/search/users?q=${text}&client_id=${process.env
+				.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
 		);
-		this.setState({ users: res.data, loading: false });
-	}
+		this.setState({ users: res.data.items, loading: false });
+	};
 
 	render() {
 		return (
@@ -31,7 +29,7 @@ class App extends Component {
 				{/* <Navbar title="Github Finder" icon="fab fa-github" /> */}
 				<Navbar />
 				<div className="container">
-					<Search />
+					<Search searchUsers={this.searchUsers} />
 					<Users loading={this.state.loading} users={this.state.users} />
 				</div>
 			</div>
