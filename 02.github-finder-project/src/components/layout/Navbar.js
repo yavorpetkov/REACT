@@ -2,6 +2,7 @@
 import React from 'react';
 // impt to bring PropTypes
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ icon, title }) => {
 	return (
@@ -10,6 +11,14 @@ const Navbar = ({ icon, title }) => {
 				{/* props are properties that can be passed into a component from outside */}
 				<i className={icon} /> {title}
 			</h1>
+			<ul>
+				<li>
+					<Link to="/" />Home
+				</li>
+				<li>
+					<Link to="/about" />About
+				</li>
+			</ul>
 		</nav>
 	);
 };
