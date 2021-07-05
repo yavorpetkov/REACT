@@ -9,7 +9,9 @@ const Navbar = ({ icon, title }) => {
 		<nav className="navbar bg-primary">
 			<h1>
 				{/* props are properties that can be passed into a component from outside */}
-				<i className={icon} /> {title}
+				<a href="/" style={{ margin: '0px' }}>
+					<i className={icon} /> {title}
+				</a>
 			</h1>
 			<ul>
 				<li>
