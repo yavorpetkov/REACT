@@ -23,10 +23,10 @@ router.put('/:id', (req, res) => {
 });
 // with put you need an id like/1
 
-// @route   DELETE api/contacts
+// @route   DELETE api/contacts/:id
 // @desc    Delete contact
 // @access  Private
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
 	res.send('Delete contact');
 });
 // with delete you need an id like/1
