@@ -97,9 +97,9 @@ router.delete('/:id', auth, async (req, res) => {
 			return res.status(401).json({ msg: 'Not authorized' });
 		}
 
-		contact = await Contact.findByIdAndUpdate(req.params.id, { $set: contactFields }, { New: true });
+		await Contact.findByIdAndRemove(req.params.id);
 
-		res.json(contact);
+		res.json({ msg: 'Contact removed' });
 	} catch (err) {
 		console.error(err.message);
 		res.status(500).send('Server Error');
