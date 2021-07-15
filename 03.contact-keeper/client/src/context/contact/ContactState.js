@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useReducer, userReduser } from 'react';
-import uuid from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import ContactContext from './contactContext';
 import contactReducer from './contactReducer';
 import {
@@ -42,8 +42,13 @@ const ContactState = (props) => {
 	};
 
 	const [ state, dispatch ] = useReducer(contactReducer, initialState);
+	// to acess a function it need to be added to the ContactContext Provider
 
 	// Add Contact
+	const addContact = (contact) => {
+		contact.id = uuidv4();
+		dispatch({ type: ADD_CONTACT, payload: contact });
+	};
 
 	// Delete Contact
 
@@ -57,10 +62,13 @@ const ContactState = (props) => {
 
 	// Clear Filter
 
+	const { contacts } = state;
+
 	return (
 		<ContactContext.Provider
 			value={{
-				contacts: state.contacts
+				contacts: contacts,
+				addContact
 			}}
 		>
 			{props.children}
