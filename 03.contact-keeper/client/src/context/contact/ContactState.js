@@ -16,6 +16,7 @@ import {
 const ContactState = (props) => {
 	const initialState = {
 		contacts: [
+			// hardcoded contacts
 			{
 				id: 1,
 				name: 'Jill Johnson',
