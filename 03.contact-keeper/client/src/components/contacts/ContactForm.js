@@ -12,12 +12,7 @@ const ContactForm = () => {
 			if (current !== null) {
 				setContact(current);
 			} else {
-				setContact({
-					name: '',
-					email: '',
-					phone: '',
-					type: 'personal'
-				});
+				setContactBack();
 			}
 		},
 		// only happens when these to are changed
@@ -34,23 +29,29 @@ const ContactForm = () => {
 	const { name, email, phone, type } = contact;
 
 	// FUNCTIONS
-	// e.target.name will look at the name and the value and if they match it will set it
-	const onChange = (e) => setContact({ ...contact, [e.target.name]: e.target.value });
 
-	const onSubmit = (e) => {
-		e.preventDefault();
-		if (current === null) {
-			addContact(contact);
-		} else {
-			updateContact(contact);
-		}
-		// returns everything back to normal
+	const setContactBack = () => {
 		setContact({
 			name: '',
 			email: '',
 			phone: '',
 			type: 'personal'
 		});
+	};
+	// e.target.name will look at the name and the value and if they match it will set it
+	const onChange = (e) => setContact({ ...contact, [e.target.name]: e.target.value });
+
+	const onSubmit = (e) => {
+		e.preventDefault();
+		if (current === null && name !== '' && email !== '' && phone !== '') {
+			addContact(contact);
+			setContactBack();
+		} else if (current !== null) {
+			updateContact(contact);
+			setContactBack();
+		}
+
+		// returns everything back to normal
 	};
 
 	const clearAll = () => {
