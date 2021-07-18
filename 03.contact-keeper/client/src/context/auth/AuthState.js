@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useReducer, userReduser } from 'react';
-import AuthContext from './AuthContext';
+import AuthContext from './authContext';
 import authReducer from './authReducer';
 import {
 	REGISTER_SUCCESS,
