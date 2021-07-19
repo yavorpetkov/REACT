@@ -11,7 +11,8 @@ import {
 	LOGIN_SUCCESS,
 	LOGIN_FAIL,
 	LOGOUT,
-	CLEAR_ERRORS
+	CLEAR_ERRORS,
+	CLEAR_CURRNET
 } from '../types';
 
 const AuthState = (props) => {
@@ -63,9 +64,7 @@ const AuthState = (props) => {
 	};
 
 	// CLEAR ERRORS
-	const clearErrors = () => {
-		console.log('clearErrors');
-	};
+	const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
 	const { token, isAuthenticated, loading, user, error } = state;
 
