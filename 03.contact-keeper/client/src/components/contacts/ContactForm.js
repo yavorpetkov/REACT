@@ -6,6 +6,15 @@ const ContactForm = () => {
 
 	const { addContact, current, clearCurrent, updateContact } = contactContext;
 
+	const setContactBack = () => {
+		setContact({
+			name: '',
+			email: '',
+			phone: '',
+			type: 'personal'
+		});
+	};
+
 	// mymics the effect of componentDidMount
 	useEffect(
 		() => {
@@ -30,14 +39,6 @@ const ContactForm = () => {
 
 	// FUNCTIONS
 
-	const setContactBack = () => {
-		setContact({
-			name: '',
-			email: '',
-			phone: '',
-			type: 'personal'
-		});
-	};
 	// e.target.name will look at the name and the value and if they match it will set it
 	const onChange = (e) => setContact({ ...contact, [e.target.name]: e.target.value });
 
