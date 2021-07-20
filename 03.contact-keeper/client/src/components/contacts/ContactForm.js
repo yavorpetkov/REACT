@@ -6,6 +6,13 @@ const ContactForm = () => {
 
 	const { addContact, current, clearCurrent, updateContact } = contactContext;
 
+	const [ contact, setContact ] = useState({
+		name: '',
+		email: '',
+		phone: '',
+		type: 'personal'
+	});
+
 	const setContactBack = () => {
 		setContact({
 			name: '',
@@ -27,13 +34,6 @@ const ContactForm = () => {
 		// only happens when these to are changed
 		[ contactContext, current ]
 	);
-
-	const [ contact, setContact ] = useState({
-		name: '',
-		email: '',
-		phone: '',
-		type: 'personal'
-	});
 
 	const { name, email, phone, type } = contact;
 
