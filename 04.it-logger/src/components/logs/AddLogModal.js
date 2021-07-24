@@ -50,18 +50,18 @@ const AddLogModal = () => {
 								<input
 									type="checkbox"
 									className="filled-in"
-									value={attention}
 									checked={attention}
+									value={attention}
 									onChange={(e) => setAttention(!attention)}
 								/>
+								<span>Needs Attention</span>
 							</label>
-							<span>Needs Attention</span>
 						</p>
 					</div>
 				</div>
 			</div>
 			<div className="modal-footer">
-				<a href="#!" onClick={onSubmit} className="modal-close waves-effect waves-green btn-flat">
+				<a href="#!" onClick={onSubmit} className="modal-close waves-effect waves-green btn">
 					Enter
 				</a>
 			</div>
