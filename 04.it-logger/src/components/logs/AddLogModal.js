@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import M from 'materialize-css/dist/js/materialize.min.js';
 
 const AddLogModal = () => {
 	const [ message, setMessage ] = useState('');
@@ -6,7 +7,12 @@ const AddLogModal = () => {
 	const [ tech, setTech ] = useState('');
 
 	const onSubmit = () => {
-		console.log(message, tech, attention);
+		if (message === '' || tech === '') {
+			// like an error message
+			M.toast({ html: 'Please enter a message and tech' });
+		} else {
+			console.log(message, tech, attention);
+		}
 	};
 
 	return (
@@ -61,7 +67,7 @@ const AddLogModal = () => {
 				</div>
 			</div>
 			<div className="modal-footer">
-				<a href="#!" onClick={onSubmit} className="modal-close waves-effect waves-green btn">
+				<a href="#!" onClick={onSubmit} className="modal-close waves-effect blue btn">
 					Enter
 				</a>
 			</div>
