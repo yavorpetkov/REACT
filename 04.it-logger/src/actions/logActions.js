@@ -1,5 +1,6 @@
 import { GET_LOGS, SET_LOADING, LOGS_ERROR } from './types';
 
+// GET LOGS FROM SERVER
 // export const getLogs = () => {
 // 	return async (dispatch) => {
 // 		setLoading();
