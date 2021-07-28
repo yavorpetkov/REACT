@@ -1,18 +1,18 @@
 {
   "logs": [
     {
+      "id": 1,
       "message": "fixxed 002 HardDrive",
       "attention": false,
-      "tech": "Sam Smith",
-      "date": "2021-07-27T13:44:18.225Z",
-      "id": 1
+      "tech": "Sara Wilson",
+      "date": "2021-07-28T12:09:24.027Z"
     },
     {
+      "id": 3,
       "message": "dummy Log 002",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2021-07-27T14:54:36.659Z",
-      "id": 3
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2021-07-28T12:05:44.464Z"
     }
   ],
   "techs": [
