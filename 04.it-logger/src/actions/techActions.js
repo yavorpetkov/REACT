@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR } from './types';
 
 // GET TECHS FROM SERVER
