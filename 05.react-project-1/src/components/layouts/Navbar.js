@@ -2,33 +2,25 @@ import React from 'react';
 
 const Navbar = () => {
 	return (
-		<div className="flex-row container">
-			<ul>
-				<li>
-					<a href="#!">Home</a>
-				</li>
-				<li>
-					<a href="#!">About</a>
-				</li>
-				<li>
-					<a href="#!">Contact</a>
-				</li>
-			</ul>
-			<h1>
+		<div className="container">
+			<div className="text-left">
+				<a href="#!">Home</a>
+
+				<a href="#!">About</a>
+
+				<a href="#!">Contact</a>
+			</div>
+			<h1 className="text-center">
 				GOLDEN<br />
 				RAMEN
 			</h1>
-			<ul>
-				<li>
-					<a href="#!">Home</a>
-				</li>
-				<li>
-					<a href="#!">About</a>
-				</li>
-				<li>
-					<a href="#!">Contact</a>
-				</li>
-			</ul>
+			<div className="text-right">
+				<a href="#!">Home</a>
+
+				<a href="#!">About</a>
+
+				<a href="#!">Contact</a>
+			</div>
 		</div>
 	);
 };
