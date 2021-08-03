@@ -8,11 +8,11 @@ const Header = () => {
 				<Navbar />
 				<div className="header-text">
 					<div>
-						<h2>
+						<h2 className="text-slogan">
 							It's that<br />
 							simple.
 						</h2>
-						<h4>FEATURING OUR NEW SPRING SPECIALS!</h4>
+						<h3>FEATURING OUR NEW SPRING SPECIALS!</h3>
 						<a href="#!">Details</a>
 					</div>
 				</div>
