@@ -70,8 +70,13 @@ img {
 }
 /* Header */
 .header {
-	height: 50vh;
-	background: red;
+	height: 80vh;
+	background: rgb(223, 59, 59);
+}
+.header-text {
+	display: inline-block;
+	text-align: left;
+	justify-content: right;
 }
 
 /* Navbar */
