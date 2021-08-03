@@ -6,8 +6,9 @@ const Header = () => {
 		<div className="header">
 			<div className="container">
 				<Navbar />
-				<div className="header-text">
-					<div>
+				<div className="grid-2">
+					<div />
+					<div className="my-3">
 						<h2 className="text-slogan">
 							It's that<br />
 							simple.
