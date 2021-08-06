@@ -3,7 +3,45 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-            <h1>Footer</h1>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#!">Us</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#!">Us</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>
+                        <a href="#!">Us</a>
+                    </li>
+                    <li>
+                        <a href="#!">About</a>
+                    </li>
+                    <li>
+                        <a href="#!">Contacts</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 };
